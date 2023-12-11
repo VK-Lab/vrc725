@@ -6,7 +6,7 @@ async function main() {
 
   const lockedAmount = ethers.parseEther("0.001");
 
-  const lock = await ethers.deployContract("NFTSimple", [process.env.NFT_BASE_URI], { 
+  const lock = await ethers.deployContract("NFTSimple", ['Liam Test', 'LT',process.env.NFT_BASE_URI], { 
     gasLimit: "0x1000000"
  });
 

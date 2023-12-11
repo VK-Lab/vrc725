@@ -6,9 +6,13 @@ import './extensions/VRC725Enumerable.sol';
 contract NFTSimple is VRC725Enumerable {
     string private _currentBaseURI;
 
-    constructor(string memory _initBaseURI) {
+    constructor(
+        string memory _name, 
+        string memory _symbol, 
+        string memory _initBaseURI
+    ) {
         // super call function
-        __VRC725_init("Liam", "LN", msg.sender);
+        __VRC725_init(_name, _symbol, msg.sender);
         setBaseURI(_initBaseURI);
     }
 

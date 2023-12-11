@@ -8,5 +8,7 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "typeRoots": ["./process-env.d.ts"]
-  }
+  },
+  "include": ["./scripts", "./test", "./typechain-types"],
+  "files": ["./hardhat.config.ts"]
 }
