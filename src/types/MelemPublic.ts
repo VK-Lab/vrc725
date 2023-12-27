@@ -23,7 +23,7 @@ import type {
   TypedContractMethod,
 } from "./common";
 
-export interface NFTSimpleInterface extends Interface {
+export interface MelemPublicInterface extends Interface {
   getFunction(
     nameOrSignature:
       | "DOMAIN_SEPARATOR"
@@ -343,11 +343,11 @@ export namespace TransferEvent {
   export type LogDescription = TypedLogDescription<Event>;
 }
 
-export interface NFTSimple extends BaseContract {
-  connect(runner?: ContractRunner | null): NFTSimple;
+export interface MelemPublic extends BaseContract {
+  connect(runner?: ContractRunner | null): MelemPublic;
   waitForDeployment(): Promise<this>;
 
-  interface: NFTSimpleInterface;
+  interface: MelemPublicInterface;
 
   queryFilter<TCEvent extends TypedContractEvent>(
     event: TCEvent,

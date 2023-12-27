@@ -3,7 +3,7 @@ pragma solidity >=0.6.2;
 
 import './extensions/VRC725Enumerable.sol';
 
-contract NFTSimple is VRC725Enumerable {
+contract MelemInstaller is VRC725Enumerable {
     string private _currentBaseURI;
 
     constructor(
@@ -24,7 +24,7 @@ contract NFTSimple is VRC725Enumerable {
 		return _currentBaseURI;
 	}
 
-    function mint(address _to) public {
+    function mint(address _to) public onlyOwner {
         _safeMint(_to, totalSupply() + 1);
     }
 }

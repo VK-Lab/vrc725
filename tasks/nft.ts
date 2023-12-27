@@ -28,6 +28,17 @@ task("total-supply", "Total Supply")
       })
   });
 
+task("token-uri", "Token URI")
+  .setAction(async (_t, hre) => {
+    return getContract("NFTSimple", hre)
+      .then(async (contract: Contract) => {
+        const total = await contract.tokenURI('196', {
+          gasLimit: 500_000,
+        });
+
+        process.stdout.write(`Total: ${total}`);
+      })
+  });
 
 // task('token-uri', "Get token uri")
 //   .addParam('id')

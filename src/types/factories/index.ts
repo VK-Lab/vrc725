@@ -6,5 +6,6 @@ export * as helpers from "./helpers";
 export * as interfaces from "./interfaces";
 export * as libraries from "./libraries";
 export * as tests from "./tests";
-export { NFTSimple__factory } from "./NFTSimple__factory";
+export { MelemInstaller__factory } from "./MelemInstaller__factory";
+export { MelemPublic__factory } from "./MelemPublic__factory";
 export { VRC725__factory } from "./VRC725__factory";

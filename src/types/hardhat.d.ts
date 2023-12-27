@@ -74,9 +74,13 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.VRC25__factory>;
     getContractFactory(
-      name: "NFTSimple",
+      name: "MelemInstaller",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.NFTSimple__factory>;
+    ): Promise<Contracts.MelemInstaller__factory>;
+    getContractFactory(
+      name: "MelemPublic",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MelemPublic__factory>;
     getContractFactory(
       name: "TestNFT",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -162,10 +166,15 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.VRC25>;
     getContractAt(
-      name: "NFTSimple",
+      name: "MelemInstaller",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
-    ): Promise<Contracts.NFTSimple>;
+    ): Promise<Contracts.MelemInstaller>;
+    getContractAt(
+      name: "MelemPublic",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.MelemPublic>;
     getContractAt(
       name: "TestNFT",
       address: string | ethers.Addressable,
@@ -238,9 +247,13 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.VRC25>;
     deployContract(
-      name: "NFTSimple",
+      name: "MelemInstaller",
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.NFTSimple>;
+    ): Promise<Contracts.MelemInstaller>;
+    deployContract(
+      name: "MelemPublic",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.MelemPublic>;
     deployContract(
       name: "TestNFT",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -326,10 +339,15 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.VRC25>;
     deployContract(
-      name: "NFTSimple",
+      name: "MelemInstaller",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.NFTSimple>;
+    ): Promise<Contracts.MelemInstaller>;
+    deployContract(
+      name: "MelemPublic",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.MelemPublic>;
     deployContract(
       name: "TestNFT",
       args: any[],
